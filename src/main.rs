@@ -17,8 +17,6 @@ fn main() {
 
     let is_release = matched_args.is_present("release");
 
-    execute_command(Command::new("cargo").arg("update"));
-
     let cargo_toml = get_toml("Cargo.toml");
     let top_pkg_name = parse_package_name(&cargo_toml);
 
